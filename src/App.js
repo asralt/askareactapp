@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navigation from "./components/nav";
+import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom';
+import PageRenderer from './page_renderer';
+import Home from "./pages/home";
 
 function App() {
+  const user ={
+    firstName:'Asratl',
+    lastName:'Enkhee'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation user={user}/>
+        <Routes>
+          <Route path="/:page" element={<PageRenderer />} />
+          <Route path="/" component={Home} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
+}
+
+function NotFound() {
+  return <h1>404 - Not Found</h1>;
 }
 
 export default App;
