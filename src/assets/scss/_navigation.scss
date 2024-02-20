@@ -68,76 +68,76 @@
     }
 }
 
-@media screen and   (max-width:900px){
-    .site-navigation{
-        .menu-content-container{
+// @media screen and   (max-width:900px){
+//     .site-navigation{
+//         .menu-content-container{
 
-            width: 300px;
-            height: calc(100%-65%);
-            background: white;
-            position: absolute;
-            top:65%;
-            left: -300px;
-            transition:ease-in-out;
-            flex-direction: column-reverse;
-            .ul{
-                flex-direction: column;
-                justify-content: flex-start;
-            }
-            &.active{
-                left:0px;
-            }
-        
-            .ion-ios-menu{
-                display:flex;
-            }
-        }
-    }
-}
-// @media screen and (max-width: 900px) {
-//     .site-navigation {
-//         .menu-content-container {
 //             width: 300px;
-//             height: calc(100% - 65px);
+//             height: calc(100%-65%);
 //             background: white;
-//             position: fixed;
-//             top: 65px;
+//             position: absolute;
+//             top:65%;
 //             left: -300px;
-//             transition: 300ms ease left;
+//             transition:ease-in-out;
 //             flex-direction: column-reverse;
-
-//             ul {
+//             .ul{
 //                 flex-direction: column;
 //                 justify-content: flex-start;
-
-//                 li {
-//                     text-align:left;
-//                     height: 65px;
-//                     display: flex;
-//                     align-items: center;
-//                 }
-//                 a {
-//                     padding: 20px 15px;
-//                     width: 100%;
-//                 }
 //             }
-
-//             ul, li, .menu-avatar-container {
-//                 width: 100%;
+//             &.active{
+//                 left:0px;
 //             }
-
-//             .ant-avatar {
-//                 align-self: flex-start;
-//                 margin-left: 30px;
+        
+//             .ion-ios-menu{
+//                 display:flex;
 //             }
-//         }
-//         &.active {
-//             .menu-content-container {
-//                 left: 0px;
-//             }
-//         }
-//         .ion-ios-menu {
-//             display: flex;
 //         }
 //     }
 // }
+@media screen and (max-width: 900px) {
+    .site-navigation {
+        .menu-content-container {
+            width: 300px;
+            height: calc(100% - 65px);
+            background: white;
+            position: fixed;
+            top: 65px;
+            left: -300px;
+            transition: 300ms ease left;
+            flex-direction: column-reverse;
+
+            ul {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                li {
+                    text-align:left;
+                    height: 65px;
+                    display: flex;
+                    align-items: center;
+                }
+                a {
+                    padding: 20px 15px;
+                    width: 100%;
+                }
+            }
+
+            ul, li, .menu-avatar-container {
+                width: 100%;
+            }
+
+            .ant-avatar {
+                align-self: flex-start;
+                margin-left: 30px;
+            }
+        }
+        &.active {
+            .menu-content-container {
+                left: 0px;
+            }
+        }
+        .ion-ios-menu {
+            display: flex;
+        }
+    }
+}

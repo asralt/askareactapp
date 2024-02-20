@@ -1,30 +1,23 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from "./components/nav";
-import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom';
-import PageRenderer from './page_renderer';
 import Home from "./pages/home";
+import Blog from "./pages/blog";
+import Login from "./pages/login";
 
 function App() {
-  const user ={
-    firstName:'Asratl',
-    lastName:'Enkhee'
-  }
   return (
     <Router>
       <div className="App">
-        <Navigation user={user}/>
+        <Navigation />
         <Routes>
-          <Route path="/:page" element={<PageRenderer />} />
-          <Route path="/" component={Home} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
   );
-}
-
-function NotFound() {
-  return <h1>404 - Not Found</h1>;
 }
 
 export default App;

@@ -4,24 +4,12 @@ import React from 'react'
 export default function Home () {
     return (
        <div style={{
-         backgroundColor: 'black'
+         backgroundColor: 'black',
+        display:'flex',
+
        }}>
-        <text>
-            aska
-        </text>
-        <text>aska</text>
-
-        <text>aska</text>
-
-        <text>aska</text>
-
-        <text>aska</text>
-
-        <text>aska</text>
-
-        <text>aska</text>
-
-        <text>aska</text>
-       </div>
+        <text style={{fontSize:100}}>Aska</text>
+        </div>
+       
     );
     }
